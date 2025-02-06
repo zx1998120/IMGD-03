@@ -26,32 +26,32 @@ The circle will continuously pulse while generating musical tones when it reache
        colorMode(HSB, 360, 100, 100);
        noStroke();
   
-  // Simple sound setup
-  synth = new p5.MonoSynth();
-}
+       // Simple sound setup
+       synth = new p5.MonoSynth();
+       }
 
-function draw() {
-  background(0);
+       function draw() {
+       background(0);
   
-  // Calculate pulse with sine wave
-  let pulse = sin(frameCount * 0.1) * 100;
-  circleSize = 100 + pulse;
+       // Calculate pulse with sine wave
+       let pulse = sin(frameCount * 0.1) * 100;
+       circleSize = 100 + pulse;
   
-  // Mouse controls color and sound
-  let hue = map(mouseX, 0, width, 0, 360);
-  let volume = map(mouseY, 0, height, 0, 0.5);
+       // Mouse controls color and sound
+       let hue = map(mouseX, 0, width, 0, 360);
+       let volume = map(mouseY, 0, height, 0, 0.5);
   
-  // Draw pulsing circle
-  fill(hue, 80, 80);
-  ellipse(width/2, height/2, circleSize);
+       // Draw pulsing circle
+       fill(hue, 80, 80);
+       ellipse(width/2, height/2, circleSize);
   
-  // Trigger sound when circle reaches max size
-  if (circleSize > 190) {
-    playNote(hue, volume);
-  }
-}
+       // Trigger sound when circle reaches max size
+       if (circleSize > 190) {
+       playNote(hue, volume);
+          }
+             }
 
-function playNote(hue, vol) {
-  let freq = map(hue, 0, 360, 200, 800);
-  synth.play(freq, vol, 0, 0.1);
-}
+       function playNote(hue, vol) {
+       let freq = map(hue, 0, 360, 200, 800);
+       synth.play(freq, vol, 0, 0.1);
+           }
