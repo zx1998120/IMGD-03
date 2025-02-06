@@ -16,6 +16,8 @@ I was thinking of creating an audio related to pattern size. When you move your 
 
 The circle will continuously pulse while generating musical tones when it reaches its largest size. The piece creates an interactive relationship between position, color, and sound while maintaining minimal code complexity.
 
+# Code:
+
 let circleSize = 0;
 let synth;
 
