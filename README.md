@@ -18,8 +18,8 @@ The circle will continuously pulse while generating musical tones when it reache
 
 # Code:
 
-  let circleSize = 0;
-  let synth;
+   let circleSize = 0;
+   let synth;
 
 function setup() {
   createCanvas(600, 600);
